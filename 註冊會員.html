@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>高大資工系友管理系統</title>
+		<meta charset="UTF-8">
+		
+		<style>
+			#top {
+				width: 99%;
+				height: 200px;
+				background-image: url("CSIE.jpg");
+				background-size: 100% 200px;
+				text-align: center;
+				line-height:150px;
+				color: black;
+				font-family: fantasy;
+				font-size: 50px;
+			}
+		
+			#left {
+				float: left;
+				width: 15%;
+				height: 450px;
+				text-align: center;	
+				padding-top: 40px;
+				background-color: #7092C0;
+			}
+			
+			.leftblock {
+				background-color: #7092C0;
+				color: white;
+				font-family: fantasy;
+				font-size: 28px;
+				font-weight: bolder;
+			}
+			
+			.leftblock:hover {
+				background-color: #D5EDFA;
+				color: black;
+			}
+					
+			#middle {
+				float: left;
+				width: 63%;
+				height: 450px;
+				padding-top: 70px;	
+			}
+		
+			#right {
+				float: left;
+				width: 20%;
+				height: 300px;
+				text-align: center;
+				line-height: 20px;
+				font-family: fantasy;
+				font-size: 22px;
+				border-style: solid;
+				border-width: 5px;
+				background-color: #7092C0;
+				border-radius: 20px;
+				margin-top: 30px;
+			}
+			
+			#right p {
+				color: white;
+			}
+			
+			table, th, td {
+				margin-left: auto; 
+				margin-right: auto;
+				border: 2px solid black;
+				border-collapse: collapse; 
+			}
+			
+			th, td {
+				padding: 10px;
+			}		
+			
+			#bottom {
+				width: 100%; 
+				height: 150px; 
+				margin-top: 580px;
+			}			
+		</style>
+		
+	</head>
+	
+	<body style="background-color: #D5EDFA;">
+	
+		<div id="top">
+			<br>註冊會員
+			
+		</div>
+		
+		
+		<div id="left">
+			<div class="leftblock"><a href="http://localhost/nukcsie_alumnus/%E8%A8%BB%E5%86%8A%E6%9C%83%E5%93%A1.html">註冊會員</a></div><br><br><br><br>
+			<div class="leftblock">新增活動</div><br><br><br><br>
+			<div class="leftblock">留言板</div><br><br><br><br>
+			<div class="leftblock">個人檔案</div><br><br><br><br>
+		</div>
+		
+		
+		<div id="middle">
+			<form action = "insert.php" method = "POST">
+				<table>			
+					<tr>
+						<th>學號</th>
+						<td><input type="text" name="account" id="account"></td>
+						<th>姓名</th>
+						<td><input type="text" name="name" id="name"></td>
+					</tr>
+					<tr>
+					<th>性別</th>
+						<td>
+							<input type="radio" name="sex" value= "男" id="sex">男
+							<input type="radio" name="sex" value= "女" id="sex">女
+						</td>
+					<th>身分</th>
+						<td>
+							<input type="radio" name="identity" value= "在校生" id="identity">在校生
+							<input type="radio" name="identity" value= "畢業生" id="identity">畢業生
+							<input type="radio" name="identity" value= "老師" id="identity">老師
+						</td>
+					</tr>
+					
+					<tr>
+						<th>電話</th>
+						<td><input type="text" name="phone" id="phone"></td>
+						<th>信箱</th>
+						<td><input type="text" name="email" id="email"></td>
+					</tr>			
+					<tr>
+						<th>住址</th>
+						<td colspan="3"><input type="text" name="address" style="width: 100%" id="address"></td>
+					</tr>
+						<th>FB</th>
+						<td><input type="text" name="fb" id="fb"></td>
+						<th>LINE</th>
+						<td><input type="text" name="line" id="line"></td>						
+					</tr>
+						<th>在職狀況</th>
+						<td><input type="text" name="work" id="work"></td>
+						<th>密碼</th>
+						<td><input type="text" name="password" id="password"></td>
+					</tr>
+					<tr>
+						<td colspan="4">
+							<input type="submit" name="Submit_Bottom" value="送出" style="margin-left: 40%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="reset" name="Reset_Bottom" value="重設">
+						</td>
+					</tr>					
+				</table>
+				<div class="middle"align=center><a href="http://localhost/nukcsie_alumnus/nukcsie_alumnus.php">回首頁</a></div><br><br><br><br>
+			</form>			
+		</div>
+		
+		
+		<div id="right">
+			<script language="JavaScript">
+				function ShowTime(){
+　				document.getElementById('showbox').innerHTML = new Date();
+　				setTimeout('ShowTime()',1000);
+				}
+			</script>
+			<body onload="ShowTime()">
+			<div id="showbox"></div>
+			</body>
+			<p>Hello Guest!</p>
+			<br>
+			<p>
+				Welcome!!!<br>				
+			</p>			
+		</div>
+		
+		
+		<div id="bottom">
+			<img src="http://i109.photobucket.com/albums/n47/ralgia/Backgrounds/Grass-Slider-Background1.png" style="width: 100%; height: 100%;">
+		</div>
+		
+	</body>
+</html>
